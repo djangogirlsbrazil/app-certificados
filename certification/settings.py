@@ -20,7 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = 'nu&*6wca@5@bid@2ok=4_d8i$xv2n$9qk840vy__@y$#1noh_c'
+=======
+SECRET_KEY = '7@hm@8-y7@r0(ttbye*f2%awjs+h0^bn&ms1)+0@i=atzk&&pz'
+>>>>>>> djangogirlsbrazil/master
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,6 +41,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
+=======
+    'attendees_certification',
+>>>>>>> djangogirlsbrazil/master
 )
 
 MIDDLEWARE_CLASSES = (
@@ -85,9 +93,15 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
+<<<<<<< HEAD
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
+=======
+LANGUAGE_CODE = 'pt-br'
+
+TIME_ZONE = 'America/Sao_Paulo'
+>>>>>>> djangogirlsbrazil/master
 
 USE_I18N = True
 
@@ -100,3 +114,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+<<<<<<< HEAD
+=======
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+>>>>>>> djangogirlsbrazil/master
