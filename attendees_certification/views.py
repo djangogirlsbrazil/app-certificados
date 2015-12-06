@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
+import csv
 from django.shortcuts import render
 from django.views.generic import FormView
-import csv
+from django.core.urlresolvers import reverse_lazy
 
 from braces.views import LoginRequiredMixin
 
 from .forms import AttendeesForm
 from .models import Attendees
 
+
 class AttendeesUploadFormView(LoginRequiredMixin, FormView):
     form_class = AttendeesForm
     template_name = 'upload.html'
-    success_url = '/admin/'
+    success_url = reverse_lazy('upload_success')
     login_url = '/admin/login'
 
     def form_invalid(self, form):
