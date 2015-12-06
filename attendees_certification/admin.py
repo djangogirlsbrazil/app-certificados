@@ -1,6 +1,7 @@
+# -*- coding: uft-8 -*-
 from django.contrib import admin
 
-from attendees_certification.models import Attendees
+from .models import Attendees
 
 # Register your models here.
 

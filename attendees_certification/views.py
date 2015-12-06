@@ -1,7 +1,9 @@
+# -*- coding: uft-8 -*-
 from django.shortcuts import render
 from django.views.generic.edit import FormView
 
-from attendees_certification.forms import AttendeesForm
+from .forms import AttendeesForm
+
 
 class AttendeesUploadFormView(FormView):
     form_class = AttendeesForm

@@ -1,7 +1,7 @@
-# coding: utf-8
+# -*- coding: uft-8 -*-
 from django.conf.urls import include, url
 
-from attendees_certification.views import AttendeesUploadFormView
+from .views import AttendeesUploadFormView
 
 
 urlpatterns = [
