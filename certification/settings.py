@@ -102,3 +102,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+#Files
+FILE_UPLOAD_MAX_MEMORY_SIZE = 10
