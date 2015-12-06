@@ -1,4 +1,4 @@
-# -*- coding: uft-8 -*-
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.views.generic.edit import FormView
 
