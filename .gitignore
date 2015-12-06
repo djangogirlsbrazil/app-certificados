@@ -58,9 +58,6 @@ target/
 
 # Virtual env
 certificados-dg/
-<<<<<<< HEAD
-=======
 
 # Ignore SQLite DBs
 *.sqlite3
->>>>>>> djangogirlsbrazil/master
