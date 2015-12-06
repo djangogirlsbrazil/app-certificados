@@ -5,5 +5,5 @@ from .views import AttendeesUploadFormView
 
 
 urlpatterns = [
-    url(r'^upload/', AttendeesUploadFormView.as_view()),
+    url(r'^upload/', AttendeesUploadFormView.as_view(), name='file_upload'),
 ]
