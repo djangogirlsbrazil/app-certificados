@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 import csv
 from django.shortcuts import render
-from django.views.generic import FormView
-from django.core.urlresolvers import reverse_lazy
+from django.views.generic import FormView, DetailView
+from django.core.urlresolvers import reverse_lazy, reverse
 
 from braces.views import LoginRequiredMixin
 
 from .forms import AttendeesForm
+from .forms import AttendeesCertification
 from .models import Attendees
 
 
@@ -37,3 +38,21 @@ class AttendeesUploadFormView(LoginRequiredMixin, FormView):
                 email = row[1]
                 attendees = Attendees(name=name, email=email)
                 attendees.save()
+
+
+class AttendeesGetCertificationFormView(FormView):
+    form_class = AttendeesCertificationForm
+    template_name = 'certification.html'
+
+    def form_valid(self, form):
+        email = form.cleaned_data['email']
+        self.attendee = Attendees.objects.get(email=email)
+        self.success_url = reverse('certification_success', kwargs={'pk': self.attendee.pk})
+        return super(AttendeesGetCertificationFormView, self).form_valid(form)
+
+
+class SuccessCertificationDetailView(DetailView):
+    template_name = 'certification_success.html'
+    model = Attendees
+    slug_field = 'pk'
+    slug_url_kwarg = 'pk'
