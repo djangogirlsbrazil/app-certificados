@@ -7,7 +7,7 @@ from django.core.urlresolvers import reverse_lazy, reverse
 from braces.views import LoginRequiredMixin
 
 from .forms import AttendeesForm
-from .forms import AttendeesCertification
+from .forms import AttendeesCertificationForm
 from .models import Attendees
 
 
