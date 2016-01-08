@@ -1,0 +1,6 @@
+
+<form action="{% url 'get_certification' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="Submit" />
+</form>

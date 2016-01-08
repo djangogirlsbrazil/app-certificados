@@ -1,0 +1,51 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+header, footer {
+    background-color: #2E9E9E;
+    height: 5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px #bbb;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    text-shadow: 1px 1px 5px #bbb;
+}
+
+#certificate {
+    padding: 2rem;
+    text-align: center;
+}
+
+.event-logo {
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    background: url('../djangogirls.png');
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+}
+
+.event-name {
+    color: #2E9E9E;
+}
+
+.attendee {
+    color: #2E9E9E;
+    font-size: 2rem;
+    font-weight: 700;
+}
