@@ -7,21 +7,21 @@ from .models import Attendees
 
 def validate_file_extension(file):
     if not file.name.endswith('.csv'):
-        raise ValidationError(u'O formato precisa ser .CSV')
+        raise ValidationError(u'É necessário que o arquivo tenha extensão .CSV')
 
 
 class AttendeesForm(forms.Form):
-    uploaded_file = forms.FileField(label=u'Arquivo CSV', validators=[validate_file_extension])
+    uploaded_file = forms.FileField(validators=[validate_file_extension])
 
 
 class AttendeesCertificationForm(forms.Form):
-    email = forms.EmailField(label=u'Email')
+    email = forms.EmailField()
 
     def clean_email(self):
         data = self.cleaned_data['email']
         try:
             Attendees.objects.get(email=data)
         except Attendees.DoesNotExist:
-            raise ValidationError(u'Email não cadastrado')
+            raise ValidationError(u'E-mail não cadastrado.')
 
         return data
