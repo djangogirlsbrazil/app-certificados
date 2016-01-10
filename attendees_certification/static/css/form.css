@@ -19,15 +19,23 @@ header{
     box-sizing: border-box;
 	  text-align: center;
     width: 100%;
-    padding: 25px 40px;
+    padding: 0px 30px;
     background-color: #2E9E9E;
     overflow: hidden;
 }
 
 header h1{
     text-align: center;
+    display: block;
+    padding-top: 20px;
 	  font: normal 26px/1.5 'Open Sans', sans-serif;
 	  color: #fff;
+}
+
+header img{
+    float: left;
+    width: 100px;
+    height: 100px;
 }
 
 
