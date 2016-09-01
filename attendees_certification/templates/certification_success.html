@@ -1,13 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
+<style type="text/css" media="print">@page { size: landscape; }</style>
 <html>
 <head>
     <title>Certificado de Participação Django Girls</title>
     <meta charset="utf-8">
-    <meta name="description" content="Certificate Generator. Generates certificates for events, conferences and meetups.">
-    <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/certification.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
     <div class="event-logo"></div>
@@ -31,3 +29,12 @@
     <footer></footer>
 </body>
 </html>
+
+{% block extra_script %}
+    <script>
+        function print_certification() {
+            window.print();
+    }
+    print_certification();
+    </script>
+{% endblock %}
