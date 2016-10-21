@@ -9,6 +9,10 @@ header, footer {
     height: 5rem;
 }
 
+footer {
+    margin-top: 30px;
+}
+
 h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -29,7 +33,7 @@ p {
 .event-logo {
     opacity: 0.2;
     filter: alpha(opacity=20);
-    background: url('../djangogirls.png');
+    background: url('../img/djangogirls.png');
     height: 100%;
     width: 100%;
     position: absolute;
@@ -37,7 +41,6 @@ p {
     margin-right: auto;
     left: 0;
     right: 0;
-}
 }
 
 .event-name {
@@ -49,3 +52,17 @@ p {
     font-size: 2rem;
     font-weight: 700;
 }
+
+@media print {
+header, footer {
+    background-color: #2E9E9E;
+    height: 5rem;
+    -webkit-print-color-adjust: exact;
+}}
+
+@media print {
+    .header, .footer {
+        color: #2E9E9E;
+        height: 5rem;
+        color: white !important;
+}}
